@@ -1,5 +1,8 @@
 # git-bug-trace
 
+[![CodeFactor](https://www.codefactor.io/repository/github/mfuon2/almond-tr/badge)](https://www.codefactor.io/repository/github/mfuon2/almond-tr)
+[![time tracker](https://wakatime.com/badge/github/Mfuon2/almond-tr.svg)](https://wakatime.com/badge/github/Mfuon2/almond-tr)
+
 Powerful bug profiling and tracking library. Automatically creates github issues
 
 _git-bug-trace is a simple library integrated with GitHub. It collects fatal errors caught on catch blocks at runtime and creates issues automatically to respective application repository_
