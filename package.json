@@ -1,0 +1,40 @@
+{
+  "name": "git-bug-trace",
+  "version": "0.0.5",
+  "description": "Powerful bug profiling and tracking library. Automatically creates github issues",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mfuon Leonard",
+  "dependencies": {
+    "@types/node": "^14.0.13",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  },
+  "keywords": [
+    "bugs",
+    "bug",
+    "trace",
+    "git issues",
+    "production logger",
+    "issue logger",
+    "automatically",
+    "bugify",
+    "tracify"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almond-hydroponics/almond-tr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/almond-hydroponics/almond-tr/issues"
+  },
+  "homepage": "https://github.com/almond-hydroponics/almond-tr#readme"
+}
