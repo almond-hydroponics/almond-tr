@@ -2,8 +2,6 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/mfuon2/almond-tr/badge)](https://www.codefactor.io/repository/github/mfuon2/almond-tr)
 [![time tracker](https://wakatime.com/badge/github/Mfuon2/almond-tr.svg)](https://wakatime.com/badge/github/Mfuon2/almond-tr)
-[![NPM version](https://img.shields.io/npm/v/rename.svg?style=flat)](https://npmjs.org/package/git-bug-trace)
-[![NPM downloads](http://img.shields.io/npm/dm/rename.svg?style=flat)](https://npmjs.org/package/git-bug-trace)
 
 Powerful bug profiling and tracking library. Automatically creates github issues
 
