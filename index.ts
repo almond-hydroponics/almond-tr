@@ -73,10 +73,13 @@ function callback(error, response, body) {
 }
 
 function issueBody(exception, stackTrace) {
-  return `### Runtime Error Encountered
-       \n INFO: ${exception} \n
-      **Error:**
-     ${stackTrace}`;
+  return `#### Message: ${exception} 
+
+  #### Currently on:
+
+  + **Commit**:  default/bug/trace/try catch
+  + **File Trace**:    ${stackTrace}
+  + **Trace**: ${stackTrace}`;
 }
 
 function issueHeading(funcName) {
