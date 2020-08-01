@@ -1,6 +1,6 @@
 {
   "name": "git-bug-trace",
-  "version": "0.0.7",
+  "version": "0.0.8-0",
   "description": "Powerful bug profiling and tracking library. Automatically creates github issues",
   "main": "index.ts",
   "license": "MIT",
