@@ -18,7 +18,7 @@ function gitHubEndpoints() {
   };
 
   try {
-    request(options, (err, res, body) => {
+    request(options, (err: any, res: any, body: any) => {
       logger.success(body);
     });
   } catch (e) {
@@ -26,7 +26,7 @@ function gitHubEndpoints() {
   }
 }
 
-function gitHubCreateIssue(header, body, conf) {
+function gitHubCreateIssue(header: string, body: any, conf: any) {
   GITHUB_URL = GITHUB_URL + `/repos/${OWNER}/${REPO}/issues`;
 
   let data = {
@@ -41,7 +41,7 @@ function gitHubCreateIssue(header, body, conf) {
   };
 
   try {
-    request.post(GITHUB_URL, options, (error, response, body) => {
+    request.post(GITHUB_URL, options, (error: any, response: any, body: any) => {
       if (!error && response.statusCode == 201) {
         logger.success(body);
       }
@@ -72,7 +72,7 @@ function callback(error, response, body) {
   }
 }
 
-function issueBody(exception, stackTrace) {
+function issueBody(exception: any , stackTrace: any) {
   return `#### Message: ${exception} 
 
   #### Currently on:
@@ -82,7 +82,7 @@ function issueBody(exception, stackTrace) {
   + **Trace**: ${stackTrace}`;
 }
 
-function issueHeading(funcName) {
+function issueHeading(funcName: any) {
   return `Fix:(Bug) Runtime Error on line  (${funcName})  ${process.env.APPLICATION_NAME}`;
 }
 
