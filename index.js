@@ -82,7 +82,7 @@ async function gitHubGetIssues(configurations) {
 }
 
 function issueBody(exception, stackTrace) {
-  return `### Message : ${exception} 
+  return `### Messages : ${exception} 
 
   #### Currently on : 12345 test
 
