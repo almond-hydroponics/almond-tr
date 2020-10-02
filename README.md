@@ -44,6 +44,9 @@ APPLICATION_NAME = "<your application name>";
 
 // init before usage
 const almond = require("git-bug-trace");
+
+// install and require .env configuration to enable you load theenvironment variables
+require("dotenv").config();
 ```
 
 ## Module
@@ -54,11 +57,9 @@ This Module exposes the following functions which are helper functions to enable
 module.exports = {
   gitHubEndpoints,
   gitHubCreateIssue,
-  callback,
   issueBody,
   issueHeading,
   gitHubGetIssues,
-  getCallerFile,
 };
 ```
 
@@ -67,7 +68,28 @@ module.exports = {
 #### Creating GitHubIssues
 
 ```ts
-almond.gitHubCreateIssue(almond.issueHeading(almond.getCallerFile()),almond.issueBody('<Your Exception Message>','<Your Exception stack>'),<any other Object to attach>);
+almond.gitHubCreateIssue(almond.issueHeading(almond.getCallerFile()),almond.issueBody('<Your Exception Message>','<Your Exception stack>'),<Configuration Object sample below >);
+
+// Usage Example
+const configs = {
+  token: process.env.GIT_HUB_ACCESS_TOKEN,
+  owner: process.env.OWNER,
+  repository: process.env.GIT_HUB_REPOSITORY,
+  appname: process.env.APPLICATION_NAME,
+  base_url: process.env.GIT_HUB_URL,
+};
+
+// Get your allowed endpoints
+const endpoints = almond.gitHubEndpoints(token);
+endpoints.then((res) => {
+  console.log(res.data);
+});
+
+// Create an issue from your runtime application
+const issue = almond.gitHubCreateIssue(almond.issueHeading('GetUsers',configs.appname),almond.issueBody('Sample Exeption','application StackTrace'),configs);
+issue.then((res) => {
+  console.log(res.data);
+});
 
 ```
 
