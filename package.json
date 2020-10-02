@@ -14,12 +14,7 @@
     "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "md5": "^2.3.0"
-=======
-    "lodash": "^4.17.20",
-    "request": "^2.88.2"
->>>>>>> e39b7fe0868fb36e5c098252133125a573c36b3b
   },
   "devDependencies": {
     "typescript": "^3.9.5"

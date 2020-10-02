@@ -85,7 +85,6 @@ function issueBody(exception, stackTrace) {
   return `### Message : ${exception} 
 
   #### Currently on : 12345 test
-  #### Date Created : ${new Date()}
 
   + **Commit** :  default/bug/trace/try catch
   + **File Trace** :    ${stackTrace}
@@ -114,7 +113,7 @@ async function compareWithRemote(configurations, body) {
 }
 
 function issueHeading(funcName, appName) {
-  return `Fix:(Bug) Runtime Error application name : ${appName}  function name :  ${funcName} `;
+  return `Fix:(Bug) Runtime Error application name : ${appName}  function name :  ${funcName}  on : ${new Date()}`;
 }
 
 function compareLongString(stringOne, stringTwo) {
