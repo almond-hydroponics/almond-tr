@@ -12,8 +12,8 @@
     "prepublish": "yarn build",
     "test:unit": "jest --maxWorkers=2",
     "test:coverage": "yarn test:unit --coverage",
-    "eslint": "eslint --report-unused-disable-directives --format codeframe '**/*.{js,jsx,ts,tsx,json}'",
-    "eslint:fix": "yarn eslint --fix",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint \"./lib/**/*.{ts,tsx}\" --fix",
     "lint:ts": "eslint --ext=jsx,ts,tsx lib",
     "docs": "jsdoc -c jsdoc.json",
     "test": "echo \"No test specified\""

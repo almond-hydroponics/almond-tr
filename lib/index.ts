@@ -9,7 +9,7 @@ interface ICreateIssue {
 }
 
 interface IConfigurations {
-	base_url: string;
+	baseUrl: string;
 	owner: string;
 	repository: string;
 	token: string;
@@ -37,9 +37,9 @@ const gitHubCreateIssue = async ({
 	body,
 	configurations,
 }: ICreateIssue): Promise<any> => {
-	const { base_url, owner, repository, token } = configurations;
+	const { baseUrl, owner, repository, token } = configurations;
 	const issueExist = await compareWithRemote(configurations, body);
-	const GITHUB_URL = `${base_url}/repos/${owner}/${repository}/issues`;
+	const githubUrl = `${baseUrl}/repos/${owner}/${repository}/issues`;
 
 	const data = {
 		title: header,
@@ -47,7 +47,7 @@ const gitHubCreateIssue = async ({
 	};
 
 	options = {
-		url: GITHUB_URL,
+		url: githubUrl,
 		method: 'post',
 		headers: {
 			Authorization: token,
@@ -77,14 +77,14 @@ const createIssueAsync = async (options: AxiosRequestConfig): Promise<any> => {
 };
 
 const gitHubGetIssues = async ({
-	base_url,
+	baseUrl,
 	owner,
 	repository,
 	token,
 }: IConfigurations): Promise<any> => {
-	const GITHUB_URL = `${base_url}/repos/${owner}/${repository}/issues`;
+	const githubUrl = `${baseUrl}/repos/${owner}/${repository}/issues`;
 	options = {
-		url: GITHUB_URL,
+		url: githubUrl,
 		headers: {
 			Authorization: token,
 			'User-Agent': 'request',
