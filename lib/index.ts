@@ -165,7 +165,7 @@ const singleLineString = (strings: string | string[], ...values: any[]) => {
 		.trim();
 };
 
-export default {
+export {
 	gitHubEndpoints,
 	gitHubCreateIssue,
 	issueBody,
