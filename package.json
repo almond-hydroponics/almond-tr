@@ -10,7 +10,7 @@
   "author": "Mfuon Leonard",
   "dependencies": {
     "@types/node": "^14.11.2",
-    "axios": "^0.20.0",
+    "axios": "^0.22.0",
     "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
