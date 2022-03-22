@@ -1,24 +1,62 @@
 {
   "name": "git-bug-trace",
-  "version": "1.1.0",
+  "version": "2.1.1",
   "description": "Powerful bug profiling and tracking library. Automatically creates github issues",
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:start": "rollup -c -w",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "prepublish": "yarn build",
+    "test:unit": "jest --maxWorkers=2",
+    "test:coverage": "yarn test:unit --coverage",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint \"./lib/**/*.{ts,tsx}\" --fix",
+    "lint:ts": "eslint --ext=jsx,ts,tsx lib",
+    "docs": "jsdoc -c jsdoc.json",
     "test": "echo \"No test specified\""
   },
   "author": "Mfuon Leonard",
   "dependencies": {
-    "@types/node": "^14.11.2",
     "axios": "^0.20.0",
-    "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "md5": "^2.3.0",
-    "np": "^6.5.0"
+    "np": "^6.5.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "typescript": "^3.9.5"
+    "@babel/core": "^7.11.6",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-url": "^5.0.1",
+    "@types/jest": "^26.0.14",
+    "@types/md5": "^2.2.0",
+    "@types/node": "^14.11.2",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "better-docs": "^2.3.2",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jsdoc": "^3.6.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.28.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "safe-buffer": "^5.2.1",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.3"
   },
   "keywords": [
     "bugs",
@@ -38,5 +76,13 @@
   "bugs": {
     "url": "https://github.com/almond-hydroponics/almond-tr/issues"
   },
-  "homepage": "https://github.com/almond-hydroponics/almond-tr#readme"
+  "homepage": "https://github.com/almond-hydroponics/almond-tr#readme",
+  "typings": "typings/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "dist",
+    "typings"
+  ]
 }
