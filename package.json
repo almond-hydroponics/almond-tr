@@ -22,7 +22,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "md5": "^2.3.0",
     "np": "^6.5.0",
     "winston": "^3.3.3"
